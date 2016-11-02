@@ -3,7 +3,7 @@
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
  
 Based on http://drivendata.github.io/cookiecutter-data-science/  
-Adapted for the **Stedin Data Lab**.  
+Adapted for minimalist purposes.  
 Optimized for Python projects, can also be used with R.
 
 ### Requirements 
@@ -33,16 +33,16 @@ cd ~/projects
 ```
 Install the cookiecutter data science template, be referring to the Gitlab repo:
 ``` bash
-cookiecutter http://10.0.1.6/root/cookiecutter-data-science.git
+cookiecutter https://github.com/BigDataRepublic/cookiecutter-data-science.git --checkout minimal
 ```
 You will be prompted to fill in some info, such as the project name, repository name, description, etc.
   
-Next, create a new empty repo on Gitlab (http://10.0.1.6) and follow these steps to link the new project dir:  
+Next, create a new empty repo named accordingly and follow these steps to link the new project dir:  
 
 ``` bash
 cd {repo-name}
 git init
-git remote add origin git@10.0.1.6:{username}/{repo-name}.git
+git remote add origin git@{repo-host}:{username-or-organization}/{repo-name}.git
 git add -A
 git commit -m 'initial commit'
 git push -u origin master
