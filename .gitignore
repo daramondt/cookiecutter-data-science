@@ -1,2 +1,5 @@
-docs/site/
 .idea
+docs/site/
+
+# OSX Junk
+.DS_Store
