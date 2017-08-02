@@ -27,8 +27,8 @@ $ conda install cookiecutter
 ------------
 
     cookiecutter https://github.com/BigDataRepublic/cookiecutter-data-science
-    
-    
+
+
 Then from within your new project dir you can create a new environment with the same name using:
 
     conda env create -f environment.yml
@@ -45,6 +45,11 @@ We welcome contributions! [See the docs for guidelines](https://drivendata.githu
 ------------
 
     pip install -r requirements.txt
+
+### Installing Python module as egg
+------------
+
+    pip install -e .
 
 ### Running the tests
 ------------
