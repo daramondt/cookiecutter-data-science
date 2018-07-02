@@ -68,8 +68,8 @@ The directory structure of your new project looks like this:
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
+├── [[REPO NAME]]      <- Source code for use in this project.
+│   ├── __init__.py    <- Makes a Python module of the code
 │   │
 │   ├── data           <- Scripts to download or generate data
 │   │   └── make_dataset.py
@@ -87,6 +87,13 @@ The directory structure of your new project looks like this:
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
+
+### Installing Python module as egg
+------------
+If you want to reuse the code developed in your project, you can install an egg directly from your checkout:
+
+    pip install -e .
+
 
 ## Contributing
 

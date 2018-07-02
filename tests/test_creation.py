@@ -68,11 +68,11 @@ def test_folders(default_baked_project):
         'references',
         'reports',
         'reports/figures',
-        'src',
-        'src/data',
-        'src/features',
-        'src/models',
-        'src/visualization',
+        'project_name',
+        'project_name/data',
+        'project_name/features',
+        'project_name/models',
+        'project_name/visualization',
     ]
 
     ignored_dirs = [

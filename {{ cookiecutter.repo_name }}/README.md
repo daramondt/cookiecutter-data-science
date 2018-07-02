@@ -36,9 +36,9 @@ Project Organization
     │
     ├── githubrequirements.txt <- Pip references to github repo's, referred to by both `environment.yml` and `requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── setup.py           <- makes project pip installable (pip install -e .) so {{ cookiecutter.repo_name }} can be imported
+    ├── {{ cookiecutter.repo_name }}                <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes {{ cookiecutter.repo_name }} a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
@@ -58,5 +58,34 @@ Project Organization
 
 
 --------
+
+## Getting started:
+
+One should be up and running as follows:
+
+    make create_environment
+    source activate {{ cookiecutter.repo_name }}
+    make requirements
+
+If you've setup s3, one can sync to and from your bucket as follows:
+
+    make sync_data_from_s3
+    make sync_data_to_s3
+
+Running the data preparation should then be as follows:
+
+    make data
+
+### Shortcut creating the environment using conda 
+To get started in this project, you first need to setup an environment:
+
+    conda env create -f environment.yml
+
+### Installing Python module as egg
+------------
+If you want to reuse the code developed in other projects, you can install an egg directly from your checkout:
+
+    pip install -e .
+
 
 <p><small>Project based on the <a target="_blank" href="https://github.com/BigDataRepublic/cookiecutter-data-science">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
