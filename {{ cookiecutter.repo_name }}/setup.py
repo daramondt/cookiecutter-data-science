@@ -6,7 +6,7 @@ setup(
     version='0.0.1',
     description='{{ cookiecutter.description }}',
     author='{{ cookiecutter.author_name }}',
-    license='{% if cookiecutter.open_source_license == 'MIT' %}MIT{% elif cookiecutter.open_source_license == 'BSD-3-Clause' %}BSD-3{% endif %}',
+    license='{% if cookiecutter.open_source_license == 'MIT' %}MIT{% elif cookiecutter.open_source_license == 'BSD-3-Clause' %}BSD-3{% elif cookiecutter.open_source_license == 'Apache-2.0' %}Apache License 2.0{% endif %}',
     long_description="README.md",
 {% if cookiecutter.python_interpreter == 'python3' %}
     python_requires='>3.5',
