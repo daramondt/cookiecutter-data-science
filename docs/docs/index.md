@@ -155,7 +155,10 @@ Since notebooks are challenging objects for source control (e.g., diffs of the `
 # add the root directory as root of sources
 from pathlib import Path
 import sys
-project_dir = Path(__file__).resolve().parents[2]
+import os
+if not 'workbookDir' in globals():
+    workbookDir = os.getcwd()
+project_dir = Path(workbookDir).resolve().parents[1]
 sys.path.append(project_dir)
 
 # refer to you code as follows
