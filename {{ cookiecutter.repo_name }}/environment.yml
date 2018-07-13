@@ -1,4 +1,4 @@
-name: {{cookiecutter.project_name}}
+name: {{cookiecutter.repo_name}}
 dependencies:
 {% if cookiecutter.python_interpreter == 'python3' %}
 - python=3.6
