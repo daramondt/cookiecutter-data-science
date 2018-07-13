@@ -36,9 +36,9 @@ Project Organization
     │
     ├── githubrequirements.txt <- Pip references to github repo's, referred to by both `environment.yml` and `requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so {{ cookiecutter.repo_name }} can be imported
-    ├── {{ cookiecutter.repo_name }}                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes {{ cookiecutter.repo_name }} a Python module
+    ├── setup.py           <- makes project pip installable (pip install -e .) so {{ cookiecutter.package_name }} can be imported
+    ├── {{ cookiecutter.package_name }}                <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes {{ cookiecutter.package_name }} a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
     │   │   └── make_dataset.py
