@@ -42,7 +42,14 @@ def test_license(default_baked_project):
 
 
 def test_requirements(default_baked_project):
-    reqs_path = default_baked_project / 'requirements.txt'
+    reqs_path = default_baked_project / 'environment.yml'
+
+    assert reqs_path.exists()
+    assert no_curlies(reqs_path)
+
+
+def test_githubrequirements(default_baked_project):
+    reqs_path = default_baked_project / 'githubrequirements.txt'
 
     assert reqs_path.exists()
     assert no_curlies(reqs_path)
@@ -53,6 +60,13 @@ def test_makefile(default_baked_project):
 
     assert makefile_path.exists()
     assert no_curlies(makefile_path)
+
+
+def test_setuppy(default_baked_project):
+    setuppy_path = default_baked_project / 'setup.py'
+
+    assert setuppy_path.exists()
+    assert no_curlies(setuppy_path)
 
 
 def test_folders(default_baked_project):
