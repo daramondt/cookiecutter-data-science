@@ -10,3 +10,6 @@ script:
   - cookiecutter . -o temp/ --no-input -v
   - cd temp/project_name && python setup.py test && cd -
   - cd temp/project_name && python setup.py sdist && cd -
+  - cd temp/project_name && make create_environment && cd -
+  - cd temp/project_name && make test_environment && cd -
+
