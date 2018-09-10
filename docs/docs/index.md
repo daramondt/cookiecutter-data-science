@@ -158,7 +158,7 @@ import sys
 import os
 if not 'workbookDir' in globals():
     workbookDir = os.getcwd()
-project_dir = Path(workbookDir).resolve().parents[1]
+project_dir = Path(workbookDir).resolve().parents[0]
 sys.path.append(project_dir)
 
 # refer to you code as follows
